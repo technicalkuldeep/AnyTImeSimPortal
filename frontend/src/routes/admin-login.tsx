@@ -18,7 +18,7 @@ function AdminLogin() {
   const navigate = useNavigate();
 
   const handleLogin = () => {
-    if (password === "Kuldeep@123") {
+    if (password === "Ravikaushik") {
       localStorage.setItem("admin-auth", "true");
       navigate({ to: "/admin" });
     } else {
