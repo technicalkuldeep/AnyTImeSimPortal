@@ -17,8 +17,11 @@ function AdminLogin() {
 
   const navigate = useNavigate();
 
+  // Read password from .env
+  const ADMIN_PASSWORD = import.meta.env.VITE_ADMIN_PASSWORD;
+
   const handleLogin = () => {
-    if (password === "Ravikaushik") {
+    if (password === ADMIN_PASSWORD) {
       localStorage.setItem("admin-auth", "true");
       navigate({ to: "/admin" });
     } else {
@@ -94,3 +97,5 @@ function AdminLogin() {
     </div>
   );
 }
+
+export default AdminLogin;
